@@ -8,7 +8,7 @@ int main(void)
 {
 	char let;
 
-	for (let = 'A'; let <= Z'; let++)
+	for (let = 'A'; let <= 'Z'; let++)
 	{
 		putchar(let);
 	}
@@ -17,5 +17,5 @@ int main(void)
 		putchar(let);
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
