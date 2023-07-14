@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /* more headers goes there */
 /**
  * main - This is for detecting positive and negative numbers
@@ -15,7 +15,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if (n > o)
+	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
