@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - Entry mode
  * description - Printing double digit that are different
@@ -9,18 +8,23 @@ int main(void)
 {
 	int f;
 	int s;
+	int t;
 
-	for (f = 0; f <= 8; f++)
+	for (f = 0; f <= 7; f++)
 	{
-		for (s = f + 1; s <= 9; s++)
+		for (s = f + 1; s <= 8; s++)
 		{
-			putchar(f + '0');
-			putchar(s + '0');
-
-			if (f < 8 || s < 9)
+			for (t = s + 1; t <= 9; t++)
 			{
+				putchar(f + '0');
+				putchar(s + '0');
+				putchar(t + '0');
+
+				if (f < 7 || s < 8 || t < 9)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
 	}
