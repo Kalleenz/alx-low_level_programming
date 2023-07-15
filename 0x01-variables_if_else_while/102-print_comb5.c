@@ -9,9 +9,9 @@ int main(void)
 	int f;
 	int s;
 
-	for (f = 0; f <= 99; f++)
+	for (f = 0; f <= 98; f++)
 	{
-		for (s = 1; s <= 99; s++)
+		for (s = f + 1; s <= 99; s++)
 		{
 			int num1 = f / 10;
 			int num2 = f % 10;
