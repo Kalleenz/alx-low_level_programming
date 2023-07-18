@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main - printing alphabets
- * description - using putchar twice
- * Return: 0
+ * print_alphabet - printing lowercase alphabet
  */
+
 void print_alphabet(void)
 {
 	char n;
