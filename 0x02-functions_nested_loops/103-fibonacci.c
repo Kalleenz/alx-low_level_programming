@@ -12,7 +12,7 @@ int main(void)
 	long b = 2;
 	long add = b;
 
-	for (x = 0; x < 4000000; x++)
+	for (x = 0; x++;)
 	{
 		while (b + a < 4000000)
 		{
@@ -23,8 +23,7 @@ int main(void)
 			}
 			a = b - a;
 		}
-		printf("%ld", add);
 	}
-	printf("\n");
+	printf("%ld\n", add);
 	return (0);
 }
