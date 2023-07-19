@@ -8,24 +8,24 @@
 int main(void)
 {
 	int x;
-	int a = 1;
-	int b = 2;
+	long a = 1;
+	long b = 2;
 
 	for (x = 0; x < 50; x++)
 	{
 		if (x == 0)
 		{
-			printf("%d, ", a);
+			printf("%ld, ", a);
 		}
 		else if (x == 1)
 		{
-			printf("%d, ", b);
+			printf("%ld, ", b);
 		}
 		else
 		{
 			b = b + a;
 			a = b - a;
-			printf("%d, ", b);
+			printf("%ld, ", b);
 		}
 	}
 	printf("\n");
