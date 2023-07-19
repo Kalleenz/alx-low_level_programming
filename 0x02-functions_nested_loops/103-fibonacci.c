@@ -7,22 +7,20 @@
 
 int main(void)
 {
-	int x;
+	int x = 0;
 	long a = 1;
 	long b = 2;
 	long add = b;
 
-	for (x = 0; x++;)
+	while (b + a < 4000000)
 	{
-		while (b + a < 4000000)
+		b = b + a;
+		if (b % 2 == 0)
 		{
-			b = b + a;
-			if (b % 2 == 0)
-			{
-				add = add + b;
-			}
-			a = b - a;
+			add = add + b;
 		}
+		a = b - a;
+		x++;
 	}
 	printf("%ld\n", add);
 	return (0);
