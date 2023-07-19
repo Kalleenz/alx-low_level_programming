@@ -12,7 +12,7 @@ int main(void)
 	long b = 2;
 	long add = b;
 
-	for (x = 0; x++;)
+	for (x = 0; x < 4000000; x++)
 	{
 		while (b + a < 4000000)
 		{
