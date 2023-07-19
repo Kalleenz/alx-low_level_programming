@@ -15,17 +15,17 @@ int main(void)
 	{
 		if (x == 0)
 		{
-			printf("%ld, ", a);
+			printf("%ld", a);
 		}
 		else if (x == 1)
 		{
-			printf("%ld, ", b);
+			printf(", %ld", b);
 		}
 		else
 		{
 			b = b + a;
 			a = b - a;
-			printf("%ld, ", b);
+			printf(", %ld", b);
 		}
 	}
 	printf("\n");
