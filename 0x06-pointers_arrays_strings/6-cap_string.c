@@ -12,10 +12,8 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		for (i = 0; str[i] >= 'a' && str[i] <= 'z'; i++)
-		{
-			break;
-		}
+		while (!(str[i] >= 'a' && str[i] <= 'z'))
+			i++;
 
 		if (str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
 		str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
