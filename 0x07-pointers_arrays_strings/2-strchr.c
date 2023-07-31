@@ -2,9 +2,9 @@
 
 /**
  * _strchr - search for the first given character in a string
- * @s: the string
+ * @s: the string pointer
  * @c: character to be searched
- * Return: s
+ * Return: s or NULL
  */
 
 char *_strchr(char *s, char c)
