@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _strchr - search for the first given character in a string
@@ -17,5 +16,5 @@ char *_strchr(char *s, char c)
 			return (&*s);
 		}
 	}
-	return (NULL);
+	return (0);
 }
