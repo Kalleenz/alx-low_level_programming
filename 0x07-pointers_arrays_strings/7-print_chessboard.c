@@ -3,6 +3,7 @@
 /**
  * print_chessboard - entry point
  * @a: pointer
+ * Return: 0
  */
 
 void print_chessboard(char (*a)[8])
@@ -11,10 +12,10 @@ void print_chessboard(char (*a)[8])
 
 	for (d = 0; d < 8; d++)
 	{
-		_putchar('\n');
 		for (b = 0; b < 8; b++)
 		{
 			_putchar(a[d][b]);
 		}
+		_putchar('\n');
 	}
 }
