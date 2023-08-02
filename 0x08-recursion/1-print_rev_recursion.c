@@ -4,6 +4,7 @@
  * _print_rev_recursion - entry point to print a string
  * in reverse
  * @s: string pointer
+ * Return: void
  */
 
 void _print_rev_recursion(char *s)
