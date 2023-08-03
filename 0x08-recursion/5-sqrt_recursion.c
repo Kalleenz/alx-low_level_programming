@@ -11,7 +11,7 @@ int presqr(int n, int a)
 {
 	if (a * a == n)
 	{
-		return (n);
+		return (a);
 	}
 	if (a * a > n)
 	{
