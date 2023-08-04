@@ -10,7 +10,7 @@
 int main(int x, char *y[])
 {
 	(void)x;
-	printf("%s\n",y[0]);
+	printf("%s\n", y[0]);
 
 	return (0);
 }
