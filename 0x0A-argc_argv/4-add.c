@@ -9,7 +9,7 @@
  * Return: 0
  */
 
-int main(unsigned int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int add = 0;
 	int i, j;
