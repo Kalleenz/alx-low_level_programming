@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int num;
+	int num = 0;
 	char cents;
 	int coins[] = {25, 10, 5, 2, 1};
 	int coin = sizeof(coins) / sizeof(coins[0]);
