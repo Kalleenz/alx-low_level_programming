@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int num;
 	char cents;
 	int coins[] = {25, 10, 5, 2, 1};
 	int coin = sizeof(coins) / sizeof(coins[0]);
@@ -28,8 +29,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
-	int num = 0;
 
 	for (i = 0; i < coin; i++)
 	{
