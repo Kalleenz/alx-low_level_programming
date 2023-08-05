@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	char cent;
+	char cents;
 	int coins[] = {25, 10, 5, 2, 1};
 	int coin = sizeof(coins) / sizeof(coins[0]);
 
@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	cent = atoi(argv[1]);
+	cents = atoi(argv[1]);
 
-	if (cent < 0)
+	if (cents < 0)
 	{
 		printf("0\n");
 		return (0);
@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < coin; i++)
 	{
-		if (cent > 0)
+		if (cents > 0)
 		{
-			num += cent / coins[i];
-			cent = cent % coins[i];
+			num += cents / coins[i];
+			cents = cents % coins[i];
 		}
 	}
 	printf("%d\n", num);
