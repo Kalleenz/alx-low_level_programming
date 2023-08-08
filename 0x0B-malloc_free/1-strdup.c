@@ -22,14 +22,16 @@ char *_strdup(char *str)
 
 	ptrdup = malloc((i * sizeof(char)) + 1);
 
-	if (ptrdup == NULL)
+	if (ptrdup != i)
 	{
 		return (NULL);
 	}
-
-	for (j = 0; str[j] != '\0'; j++)
+	else
 	{
-		ptrdup[j] = str[j];
+		for (j = 0; str[j] != '\0'; j++)
+		{
+			ptrdup[j] = str[j];
+		}
 	}
 	ptrdup[j] = '\0';
 	return (ptrdup);
