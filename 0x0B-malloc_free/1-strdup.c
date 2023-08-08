@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 	}
-	if (str[i] == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
