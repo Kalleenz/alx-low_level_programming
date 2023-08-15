@@ -8,4 +8,4 @@ struct dog
 	char *owner;
 };
 
-#endif
+#endif /* ifndef dog_h */
