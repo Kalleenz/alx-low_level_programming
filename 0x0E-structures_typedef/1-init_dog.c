@@ -1,4 +1,6 @@
 #include "dog.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * init_dog - function to initialize a struct datat type
