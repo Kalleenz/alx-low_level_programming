@@ -6,6 +6,6 @@ typedef struct dog
 	char *name;
 	float age;
 	char *owner;
-} bull;
+} dog;
 
 #endif /* ifndef dog_h */
