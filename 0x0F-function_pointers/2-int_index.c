@@ -6,7 +6,6 @@
  * @size: size of array
  * @cmp: function pointer
  * Return: index of first element
- *
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -16,10 +15,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		return (-1);
 	}
-	if (array == NULL || cmp == NULL)
-	{
-		return;
-	}
+
 	for (i = 0; i < size; i++)
 	{
 		if (cmp(array[i]) != 0)
@@ -28,6 +24,4 @@ int int_index(int *array, int size, int (*cmp)(int))
 		}
 	}
 	return (-1);
-
-	return (i);
 }
