@@ -7,10 +7,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list all;
 	int a = 0;
 	char *delimiter = "";
 	char *string;
+
+	va_list all;
 
 	va_start(all, format);
 	if (format != NULL)
