@@ -16,9 +16,9 @@ void print_all(const char * const format, ...)
 	va_start(all, format);
 	if (format != NULL)
 	{
-		while (format[i] != '\0')
+		while (format[a] != '\0')
 		{
-			switch (format[i])
+			switch (format[a])
 			{
 				case 'c':
 					printf("%s%c", delimiter, va_arg(all, int));
