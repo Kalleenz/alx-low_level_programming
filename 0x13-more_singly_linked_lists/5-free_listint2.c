@@ -12,6 +12,12 @@ void free_listint2(listint_t **head)
 	listint_t *trav;
 	listint_t *copy;
 
+	if (*head == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+
 	trav = *head;
 	while (trav != NULL)
 	{
@@ -20,7 +26,4 @@ void free_listint2(listint_t **head)
 		trav = copy;
 	}
 	*head = NULL;
-
-	if (*head == NULL)
-		printf("(nil)");
 }
