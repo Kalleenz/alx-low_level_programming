@@ -19,6 +19,8 @@ void free_listint2(listint_t **head)
 		free(trav);
 		trav = copy;
 	}
+	*head = NULL;
+
 	if (*head == NULL)
 		printf("(nil)");
 }
