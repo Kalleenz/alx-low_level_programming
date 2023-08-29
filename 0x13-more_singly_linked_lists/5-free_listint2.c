@@ -13,14 +13,13 @@ void free_listint2(listint_t **head)
 
 	if (*head == NULL)
 	{
-		printf("(nil)");
 		return;
 	}
 
 	while (*head != NULL)
 	{
 		trav = (*head)->next;
-		free(trav);
+		free(*head);
 		*head = trav;
 
 	}
