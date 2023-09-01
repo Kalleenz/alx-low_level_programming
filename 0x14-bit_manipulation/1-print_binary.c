@@ -11,6 +11,13 @@ void print_binary(unsigned long int n)
 	unsigned long int now;
 	int i;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		_putchar('\n');
+		return;
+	}
+
 	for (i = 63; i >= 0; i--)
 	{
 		now = n >> 1;
