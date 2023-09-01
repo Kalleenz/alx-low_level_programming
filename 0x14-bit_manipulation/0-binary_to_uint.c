@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		count = count * 2 + (digit - '0');
+		count = count * 2 + (b[i] - '0');
 		power *= 2;
 	}
 	return (count);
