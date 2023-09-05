@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include "main.h"
 
 /**
@@ -22,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	let = malloc(sizeof(char) * letters);
 	if (let == NULL)
-		return (NULL);
+		return (-1);
 
 	r = read(f, let, letters);
 	w = write(STDOUT_FILENO, let, r);
