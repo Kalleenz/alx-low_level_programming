@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include "main.h"
 
-void close_now(fd);
-char *buffer(file);
+void close_now(int fd);
+char *buffer(char *file);
 
 /**
  * main - main entry point to copy file a file to another
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
  * @file: file that is been allocated a space
  * Return: a pointer
  */
-char *buffer(file)
+char *buffer(char *file)
 {
 	char *buffer;
 
@@ -74,14 +74,14 @@ char *buffer(file)
  * close_now - function to close files
  * @fd: file descriptor
  */
-void close_now(fd)
+void close_now(int fd)
 {
 	int cl;
 
 	cl = close(fd);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n, fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
