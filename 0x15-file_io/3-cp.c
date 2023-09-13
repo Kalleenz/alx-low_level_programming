@@ -4,6 +4,9 @@
 #include <unistd.h>
 #include "main.h"
 
+void close_now(fd);
+char *buffer(file);
+
 /**
  * main - main entry point to copy file a file to another
  * @argc: argument count
