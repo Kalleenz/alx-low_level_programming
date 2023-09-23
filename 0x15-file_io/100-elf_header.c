@@ -8,7 +8,6 @@
 
 void entry(unsigned long int e_entry, unsigned char *e_ident);
 void type(unsigned int e_type, unsigned char *e_ident);
-void os_abi(unsigned char *e_ident);
 void close_elf(int elf);
 void checkelf(unsigned char *e_ident);
 void magic(unsigned char *e_ident);
@@ -25,7 +24,7 @@ void version(unsigned char *e_ident);
  * @argv: argument vector
  * Return: 0
  */
-int main(int __attribute__((__unused__))argc, char **argv)
+int main(int __attribute__((__unused__))argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int i, j;
@@ -169,7 +168,7 @@ void data(unsigned char *e_ident)
 			printf("2's complement, big endian\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+			printf("<unknown: %x>\n", e_ident[EI_DATA]);
 	}
 }
 
@@ -226,6 +225,9 @@ void os_abi(unsigned char *e_ident)
 			break;
 		case ELFOSABI_TRU64:
 			printf("UNIX - TRU64\n");
+			break;
+		case ELFOSABI_STANDALONE:
+			printf("Standalone App\n");
 			break;
 		default:
 			printf("<unknown: %x>\n", e_ident[EI_OSABI]);
@@ -284,5 +286,5 @@ void entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#x\n", (unsigned int)e_entry);
 	}
 	else
-		printf("%#lx", e_entry);
+		printf("%#lx\n", e_entry);
 }
