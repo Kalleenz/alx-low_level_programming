@@ -106,7 +106,7 @@ void magic(unsigned char *e_ident)
 {
 	int i;
 
-	printf(" Magic: ");
+	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", e_ident[i]);
@@ -123,7 +123,7 @@ void magic(unsigned char *e_ident)
  */
 void abi_v(unsigned char *e_ident)
 {
-	printf(" ABI Version: %d\n", e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:          %d\n", e_ident[EI_ABIVERSION]);
 }
 
 /**
