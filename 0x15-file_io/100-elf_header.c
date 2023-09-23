@@ -6,6 +6,19 @@
 #include <sys/stat.h>
 #include <elf.h>
 
+void entry(unsigned long int e_entry, unsigned char *e_ident);
+void type(unsigned int e_type, unsigned char *e_ident);
+void os_abi(unsigned char *e_ident);
+void close_elf(int elf);
+void checkelf(unsigned char *e_ident);
+void magic(unsigned char *e_ident);
+void abi_v(unsigned char *e_ident);
+void class(unsigned char *e_ident);
+void data(unsigned char *e_ident);
+void os_abi(unsigned char *e_ident);
+void version(unsigned char *e_ident);
+
+
 /**
  * main - Entry point
  * @argc: argument count which is unused
@@ -14,7 +27,7 @@
  */
 int main(int __attribute__((__unused__))argc, char **argv)
 {
-	elf64_ehdr *header;
+	Elf64_Ehdr *header;
 	int i, j;
 
 	i = open(argv[1], O_RDONLY);
@@ -23,18 +36,18 @@ int main(int __attribute__((__unused__))argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Unable to read %s file\n", argv[1]);
 		exit(98);
 	}
-	header = malloc(sizeof(elf64_ehdr));
+	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close(i);
+		close_elf(i);
 		dprintf(STDERR_FILENO, "Error: Unable to read %s file\n", argv[1]);
 		exit(98);
 	}
-	j = read(i, header, sizeof(elf64_ehdr));
+	j = read(i, header, sizeof(Elf64_Ehdr));
 	if (j == -1)
 	{
 		free(header);
-		close(i);
+		close_elf(i);
 		dprintf(STDERR_FILENO, "Error: File does not exist %s\n", argv[1]);
 		exit(98);
 	}
@@ -50,7 +63,7 @@ int main(int __attribute__((__unused__))argc, char **argv)
 	entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close(i);
+	close_elf(i);
 	return (0);
 }
 
@@ -58,7 +71,7 @@ int main(int __attribute__((__unused__))argc, char **argv)
  * close - closes the elf file
  * @elf: elf file descriptor
  */
-void close(int elf)
+void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
