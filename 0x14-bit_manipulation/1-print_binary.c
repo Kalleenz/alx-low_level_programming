@@ -1,5 +1,5 @@
-#include <stddef.h>
 #include "main.h"
+#include <stddef.h>
 
 /**
  * print_binary - printing decimal to binary
@@ -22,6 +22,6 @@ void print_binary(unsigned long int n)
 		else if (num)
 			_putchar('0');
 	}
-	if (num == NULL)
+	if (!num)
 		_putchar('0');
 }
